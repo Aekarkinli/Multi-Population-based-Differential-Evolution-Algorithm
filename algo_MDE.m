@@ -1,8 +1,11 @@
 %{
 
-AUTHOR: AHMET EMIN KARKINLI
 MULTI-POPULATION BASED DIFFERENTIAL EVOLUTION ALGORITHM
-
+Title of Paper: Detection of object boundary from point cloud by using multi-population based differential evolution algorithm
+Author: Ahmet Emin KARKINLI
+Email: akarkinli@ohu.edu.tr
+Address: Department of Geomatics Engineering, Faculty of Engineering, Nigde Omer Halisdemir University, Nigde, Turkey
+Cite as: Karkinli, A.E. Detection of object boundary from point cloud by using multi-population based differential evolution algorithm. Neural Comput & Applic (2022). https://doi.org/10.1007/s00521-022-07969-w
 See for ReadMe.m for example usage
 
 %}
