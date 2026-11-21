@@ -100,12 +100,15 @@ See [`examples/`](examples) for the circle-fitting example and a benchmark scrip
 | [OptunaHub](https://hub.optuna.org) | `optunahub.load_module("samplers/mde").MDESampler(population_size=30)` | Submitted: [optuna/optunahub-registry#457](https://github.com/optuna/optunahub-registry/pull/457) |
 | [EvoloPy](https://github.com/7ossam81/EvoloPy) | `run(["MDE"], ["F1"], ...)` | Submitted: [7ossam81/EvoloPy#85](https://github.com/7ossam81/EvoloPy/pull/85) |
 | [pyMetaheuristic](https://github.com/Valdecy/pyMetaheuristic) | `pymetaheuristic.optimize(algorithm="mde", ...)` | Submitted: [Valdecy/pyMetaheuristic#14](https://github.com/Valdecy/pyMetaheuristic/pull/14) |
+| [Nevergrad](https://github.com/facebookresearch/nevergrad) | `ng.optimizers.registry["MDE"](parametrization=..., budget=...)` | Submitted: [facebookresearch/nevergrad#1733](https://github.com/facebookresearch/nevergrad/pull/1733) |
+| [pymoo](https://github.com/the-dual-space/pymoo) | `from pymoo.algorithms.soo.nonconvex.mde import MDE` → `MDE(pop_size=90)` | Submitted: [the-dual-space/pymoo#824](https://github.com/the-dual-space/pymoo/pull/824) |
+| [PyPop7](https://github.com/Evolutionary-Intelligence/pypop) | `from pypop7.optimizers.de import MDE` | Submitted: [Evolutionary-Intelligence/pypop#480](https://github.com/Evolutionary-Intelligence/pypop/pull/480) |
 
 Until a pull request is merged, you can install that library from the `add-mde` branch of its fork
 (for example `pip install git+https://github.com/Aekarkinli/mealpy.git@add-mde`).
 
-In mealpy, NiaPy, EvoloPy and pyMetaheuristic, the library's population size means the full population
-(*3N*). So `pop_size=90` is the same as `N = 30` here.
+In mealpy, NiaPy, EvoloPy, pyMetaheuristic, pymoo and PyPop7, the library's population size means the full population
+(*3N*). So `pop_size=90` is the same as `N = 30` here. In OptunaHub and Nevergrad, `population_size`/`popsize` is *N*.
 
 <details>
 <summary>Usage examples for each library</summary>
