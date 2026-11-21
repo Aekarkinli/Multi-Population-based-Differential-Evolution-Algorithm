@@ -1,12 +1,21 @@
 %{
 
-MULTI-POPULATION BASED DIFFERENTIAL EVOLUTION ALGORITHM
+MULTI-POPULATION BASED DIFFERENTIAL EVOLUTION ALGORITHM (MDE)
 Title of Paper: Detection of object boundary from point cloud by using multi-population based differential evolution algorithm
 Author: Ahmet Emin KARKINLI
 Email: akarkinli@ohu.edu.tr
 Address: Department of Geomatics Engineering, Faculty of Engineering, Nigde Omer Halisdemir University, Nigde, Turkey
-Cite as: Karkinli, A.E. Detection of object boundary from point cloud by using multi-population based differential evolution algorithm. Neural Comput & Applic (2022). https://doi.org/10.1007/s00521-022-07969-w
-See for ReadMe.m for example usage
+Cite as: Karkinli, A.E. Detection of object boundary from point cloud by using multi-population based
+         differential evolution algorithm. Neural Comput & Applic 35, 5193-5206 (2023).
+         https://doi.org/10.1007/s00521-022-07969-w
+Usage:   out = algo_MDE(objfun, mydata, N, D, low, up, MaxCycle, seed)
+         objfun receives a (N x D) matrix and mydata, returns an (N x 1) vector.
+         See example_circle_fit.m. A Python version is in src/mde_optimizer.
+License: MIT (see LICENSE). Copyright (c) 2022-2026 Ahmet Emin Karkinli.
+
+v2.0 (2026): borderControl now follows Eq. 15 of the paper (an out-of-bounds variable is
+             re-sampled uniformly in [low, up]). The previous version could return values
+             outside the box when low and up had the same sign.
 
 %}
 
@@ -65,12 +74,11 @@ for cycle  =  1 : MaxCycle
     noise  =  B  .*  10.^randi([-12 -9] , N , D) .* (rand(N , 1)-0.50);
 end
 
-% Border Control
+% Border Control (Eq. 15): re-sample out-of-bounds variables uniformly in [low, up]
 function x = borderControl(x , low , up)
 [N , D] = size(x);
 for i = 1:N
     for j = 1:D
-        if x(i , j) < low(j) ,  x(i , j) = min(rand*low(j) , low(j)); end
-        if x(i , j) > up(j) ,   x(i , j) = max(rand*up(j) , up(j)); end
+        if x(i , j) < low(j) || x(i , j) > up(j) ,  x(i , j) = low(j) + rand * (up(j) - low(j)); end
     end
 end

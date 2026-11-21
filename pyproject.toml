@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mde-optimizer"
+version = "2.0.0"
+description = "Multi-population based Differential Evolution (MDE): a parameter-free global optimizer"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Ahmet Emin Karkinli", email = "akarkinli@ohu.edu.tr" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.21"]
+keywords = ["optimization", "metaheuristic", "differential evolution", "evolutionary algorithm", "global optimization"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/Aekarkinli/Multi-Population-based-Differential-Evolution-Algorithm"
+Paper = "https://doi.org/10.1007/s00521-022-07969-w"
+
+[tool.setuptools.packages.find]
+where = ["src"]

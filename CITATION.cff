@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use MDE, please cite the article below."
+title: "MDE: Multi-population based Differential Evolution Algorithm"
+type: software
+authors:
+  - family-names: Karkinli
+    given-names: Ahmet Emin
+    email: akarkinli@ohu.edu.tr
+    affiliation: "Department of Geomatics Engineering, Nigde Omer Halisdemir University, Nigde, Turkey"
+version: 2.0.0
+date-released: 2026-11-21
+license: MIT
+repository-code: "https://github.com/Aekarkinli/Multi-Population-based-Differential-Evolution-Algorithm"
+keywords:
+  - optimization
+  - metaheuristic
+  - differential evolution
+  - evolutionary computation
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Karkinli
+      given-names: Ahmet Emin
+  title: "Detection of object boundary from point cloud by using multi-population based differential evolution algorithm"
+  journal: "Neural Computing and Applications"
+  volume: 35
+  start: 5193
+  end: 5206
+  year: 2023
+  doi: "10.1007/s00521-022-07969-w"
