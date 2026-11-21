@@ -93,11 +93,14 @@ See [`examples/`](examples) for the circle-fitting example and a benchmark scrip
 
 | Library | How to use MDE | Status |
 |---|---|---|
-| [mealpy](https://github.com/thieu1995/mealpy) | `from mealpy import MDE` → `MDE.OriginalMDE(epoch=1000, pop_size=90)` | PR_MEALPY |
-| [NiaPy](https://github.com/NiaOrg/NiaPy) | `from niapy.algorithms.basic import MultiPopulationDifferentialEvolution` | PR_NIAPY |
-| [OptunaHub](https://hub.optuna.org) | `optunahub.load_module("samplers/mde").MDESampler(population_size=30)` | PR_OPTUNAHUB |
-| [EvoloPy](https://github.com/7ossam81/EvoloPy) | `run(["MDE"], ["F1"], ...)` | PR_EVOLOPY |
-| [pyMetaheuristic](https://github.com/Valdecy/pyMetaheuristic) | `pymetaheuristic.optimize(algorithm="mde", ...)` | PR_PYMETAHEURISTIC |
+| [mealpy](https://github.com/thieu1995/mealpy) | `from mealpy import MDE` → `MDE.OriginalMDE(epoch=1000, pop_size=90)` | Submitted: [thieu1995/mealpy#286](https://github.com/thieu1995/mealpy/pull/286) |
+| [NiaPy](https://github.com/NiaOrg/NiaPy) | `from niapy.algorithms.basic import MultiPopulationDifferentialEvolution` | Submitted: [NiaOrg/NiaPy#770](https://github.com/NiaOrg/NiaPy/pull/770) |
+| [OptunaHub](https://hub.optuna.org) | `optunahub.load_module("samplers/mde").MDESampler(population_size=30)` | Submitted: [optuna/optunahub-registry#457](https://github.com/optuna/optunahub-registry/pull/457) |
+| [EvoloPy](https://github.com/7ossam81/EvoloPy) | `run(["MDE"], ["F1"], ...)` | Submitted: [7ossam81/EvoloPy#85](https://github.com/7ossam81/EvoloPy/pull/85) |
+| [pyMetaheuristic](https://github.com/Valdecy/pyMetaheuristic) | `pymetaheuristic.optimize(algorithm="mde", ...)` | Submitted: [Valdecy/pyMetaheuristic#14](https://github.com/Valdecy/pyMetaheuristic/pull/14) |
+
+Until a pull request is merged, you can install that library from the `add-mde` branch of its fork
+(for example `pip install git+https://github.com/Aekarkinli/mealpy.git@add-mde`).
 
 In mealpy, NiaPy, EvoloPy and pyMetaheuristic, the library's population size means the full population
 (*3N*). So `pop_size=90` is the same as `N = 30` here.
