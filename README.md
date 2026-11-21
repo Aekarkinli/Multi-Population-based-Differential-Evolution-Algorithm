@@ -96,7 +96,7 @@ See [`examples/`](examples) for the circle-fitting example and a benchmark scrip
 | Library | How to use MDE | Status |
 |---|---|---|
 | [mealpy](https://github.com/thieu1995/mealpy) | `from mealpy import MDE` → `MDE.OriginalMDE(epoch=1000, pop_size=90)` | Submitted: [thieu1995/mealpy#286](https://github.com/thieu1995/mealpy/pull/286) |
-| [NiaPy](https://github.com/NiaOrg/NiaPy) | `from niapy.algorithms.modified import MultiPopulationDifferentialEvolution` | Submitted: [NiaOrg/NiaPy#770](https://github.com/NiaOrg/NiaPy/pull/770) |
+| [NiaPy](https://github.com/NiaOrg/NiaPy) | `from niapy.algorithms.modified import MultiPopulationDifferentialEvolution` | **Merged**: [NiaOrg/NiaPy#770](https://github.com/NiaOrg/NiaPy/pull/770) (in the next NiaPy release; until then `pip install git+https://github.com/NiaOrg/NiaPy.git`) |
 | [OptunaHub](https://hub.optuna.org) | `optunahub.load_module("samplers/mde").MDESampler(population_size=30)` | Submitted: [optuna/optunahub-registry#457](https://github.com/optuna/optunahub-registry/pull/457) |
 | [EvoloPy](https://github.com/7ossam81/EvoloPy) | `run(["MDE"], ["F1"], ...)` | Submitted: [7ossam81/EvoloPy#85](https://github.com/7ossam81/EvoloPy/pull/85) |
 | [pyMetaheuristic](https://github.com/Valdecy/pyMetaheuristic) | `pymetaheuristic.optimize(algorithm="mde", ...)` | Submitted: [Valdecy/pyMetaheuristic#14](https://github.com/Valdecy/pyMetaheuristic/pull/14) |
