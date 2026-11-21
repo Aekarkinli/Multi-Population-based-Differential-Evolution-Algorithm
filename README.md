@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Tests](https://github.com/Aekarkinli/Multi-Population-based-Differential-Evolution-Algorithm/actions/workflows/tests.yml/badge.svg)](https://github.com/Aekarkinli/Multi-Population-based-Differential-Evolution-Algorithm/actions/workflows/tests.yml)
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2022a%2B-orange)
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 
 **MDE** is a population-based, non-recursive, real-valued global optimizer for single-objective
 problems. It was introduced in:
